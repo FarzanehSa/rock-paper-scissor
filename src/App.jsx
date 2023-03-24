@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import './App.scss';
 import Score from './Score';
 import { ReactComponent as Paper } from './images/icon-paper.svg';
@@ -12,10 +13,13 @@ import { ReactComponent as Triangle } from './images/bg-triangle.svg';
 import { ReactComponent as Pentagon } from './images/bg-pentagon.svg';
 
 function App() {
+
+  const [score, setScore] = useState(0);
+
   return (
     <div className="App">
 
-      <Score />
+      <Score score={score}/>
       
       <Paper />
       <Rock />
