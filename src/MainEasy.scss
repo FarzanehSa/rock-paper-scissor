@@ -1,6 +1,6 @@
 .easy-main {
   border: 2px solid red;
-  // background-color:  hsl(237, 49%, 15%);
+  background-color:  hsl(237, 49%, 15%);
   width: 100%;
   height: 70vh;
   padding: 5rem;
@@ -35,22 +35,50 @@
   }
   
   .key-paper {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 10px solid CornflowerBlue;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     z-index: 100;
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: -60px;
+    left: -60px;
   }
+
   .key-scissors {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 10px solid goldenrod;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     z-index: 100;
     position: absolute;
-    top: -5px;
-    right: 5px;
+    top: -60px;
+    right: -60px;
   }
   .key-rock {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 10px solid tomato;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     z-index: 100;
     position: absolute;
-    bottom: -5px;
-    left: 43%;
+    bottom: -60px;
+    left: 60;
   }
 
 
