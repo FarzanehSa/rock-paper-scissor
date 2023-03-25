@@ -1,15 +1,13 @@
 import {useState} from 'react';
 import './App.scss';
 import Score from './Score';
-import { ReactComponent as Paper } from './images/icon-paper.svg';
-import { ReactComponent as Rock } from './images/icon-rock.svg';
-import { ReactComponent as Scissors } from './images/icon-scissors.svg';
+import MainEasy from './MainEasy';
+
 import { ReactComponent as Lizard } from './images/icon-lizard.svg';
 import { ReactComponent as Spock } from './images/icon-spock.svg';
 import { ReactComponent as Close } from './images/icon-close.svg';
 import { ReactComponent as RulesBonus } from './images/image-rules-bonus.svg';
 import { ReactComponent as Rules } from './images/image-rules.svg';
-import { ReactComponent as Triangle } from './images/bg-triangle.svg';
 import { ReactComponent as Pentagon } from './images/bg-pentagon.svg';
 
 function App() {
@@ -20,17 +18,15 @@ function App() {
     <div className="App">
 
       <Score score={score}/>
+      <MainEasy />
+
       
-      <Paper />
-      <Rock />
-      <Scissors />
-      <Lizard />
-      <Spock />
-      <RulesBonus />
-      <Rules />
-      <Close />
-      <Triangle />
-      <Pentagon />
+      {/* <Scissors /> */}
+      {/* <Lizard /> */}
+      {/* <RulesBonus /> */}
+      {/* <Rules /> */}
+      {/* <Close /> */}
+      {/* <Pentagon /> */}
 
     </div>
   );

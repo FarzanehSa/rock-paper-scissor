@@ -1,0 +1,57 @@
+.easy-main {
+  border: 2px solid red;
+  // background-color:  hsl(237, 49%, 15%);
+  width: 100%;
+  height: 70vh;
+  padding: 5rem;
+  // height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .back {
+    border: 2px solid green;
+    // width: 100%;
+    // height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+  }
+  
+
+  .triangle {
+    border: 2px solid red;
+    z-index: 0;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+  }
+  
+  .key-paper {
+    z-index: 100;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+  .key-scissors {
+    z-index: 100;
+    position: absolute;
+    top: -5px;
+    right: 5px;
+  }
+  .key-rock {
+    z-index: 100;
+    position: absolute;
+    bottom: -5px;
+    left: 43%;
+  }
+
+
+}
