@@ -30,14 +30,16 @@ function MainEasy() {
             <Paper/>
           </div>
         </div>
-        <div className='key-scissors' onClick={() => handleClickScissors()}>
-          <Scissors/>
+        <div className="scissors-container">
+          <div className='key-scissors' onClick={() => handleClickScissors()}>
+            <Scissors/>
+          </div>
         </div>
-        <div className='key-rock' onClick={() => handleClickRock()}>
-          <Rock />
+        <div className="rock-container">
+          <div className='key-rock' onClick={() => handleClickRock()}>
+            <Rock />
+          </div>
         </div>
-        
-        
       </div>
     </div>
   );

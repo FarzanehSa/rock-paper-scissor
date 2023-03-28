@@ -51,26 +51,29 @@
     position: absolute;
     top: -60px;
     left: -60px;
+
+    .key-paper {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      border: none;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: inset 0px 7px 0px 0px silver;
+    }
   }
   
-  .key-paper {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    border: none;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 0px 7px 0px 0px silver;
-  }
-
-  .key-scissors {
+  .scissors-container {
     height: 120px;
     width: 120px;
     border-radius: 50%;
-    border: 10px solid goldenrod;
-    background-color: white;
+    background-color: #e1af34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 7px 0px 0px #b98c1b;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,7 +82,20 @@
     position: absolute;
     top: -60px;
     right: -60px;
+    
+    .key-scissors {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      border: none;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: inset 0px 7px 0px 0px silver;
+    }
   }
+
   .key-rock {
     height: 120px;
     width: 120px;
