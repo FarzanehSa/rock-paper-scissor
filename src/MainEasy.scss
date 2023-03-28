@@ -33,13 +33,16 @@
     // left: 50%;
     // transform: translate(-50%, -50%);
   }
-  
-  .key-paper {
+
+  .paper-container {
     height: 120px;
     width: 120px;
     border-radius: 50%;
-    border: 10px solid CornflowerBlue;
-    background-color: white;
+    background-color: CornflowerBlue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 7px 0px 0px #324e80;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,6 +51,18 @@
     position: absolute;
     top: -60px;
     left: -60px;
+  }
+  
+  .key-paper {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 7px 0px 0px silver;
   }
 
   .key-scissors {

@@ -25,8 +25,10 @@ function MainEasy() {
       <div className='back'>
 
         <Triangle className='triangle' />
-        <div className='key-paper' onClick={() => handleClickPaper()}>
-          <Paper/>
+        <div className="paper-container">
+          <div className='key-paper' onClick={() => handleClickPaper()}>
+            <Paper/>
+          </div>
         </div>
         <div className='key-scissors' onClick={() => handleClickScissors()}>
           <Scissors/>
