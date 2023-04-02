@@ -2,6 +2,7 @@ import {useState} from 'react';
 import './App.scss';
 import Score from './Score';
 import MainEasy from './MainEasy';
+import ResultEasy from './ResultEasy';
 
 import { ReactComponent as Lizard } from './images/icon-lizard.svg';
 import { ReactComponent as Spock } from './images/icon-spock.svg';
@@ -13,12 +14,16 @@ import { ReactComponent as Pentagon } from './images/bg-pentagon.svg';
 function App() {
 
   const [score, setScore] = useState(0);
+  const [user, setUser] = useState(null);
 
   return (
     <div className="App">
 
       <Score score={score}/>
-      <MainEasy />
+      {!user ?
+      <MainEasy user={user} setUser={setUser}/> :
+      <ResultEasy user={user} />
+      }
 
       
       {/* <Scissors /> */}

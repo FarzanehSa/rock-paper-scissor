@@ -5,9 +5,8 @@ import { ReactComponent as Rock } from './images/icon-rock.svg';
 import { ReactComponent as Scissors } from './images/icon-scissors.svg';
 import { ReactComponent as Triangle } from './images/bg-triangle.svg';
 
-function MainEasy() {
+function MainEasy({user, setUser}) {
 
-  const [user, setUser] = useState(null);
   console.log(user);
 
   const handleClickPaper = () => {
