@@ -10,6 +10,20 @@
   align-items: center;
   position: relative;
 
+  .user-choose, .computer-choose {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem;
+  }
+
+  .text {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 2rem;
+  }
+
   .paper-container {
     height: 120px;
     width: 120px;
@@ -57,6 +71,23 @@
 
     z-index: 100;
   }
+
+  .com-container {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: #B8B8B8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 7px 0px 0px #808080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 100;
+  }
+
   .key {
     height: 100px;
     width: 100px;
