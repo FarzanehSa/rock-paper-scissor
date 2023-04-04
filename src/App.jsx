@@ -22,7 +22,7 @@ function App() {
       <Score score={score}/>
       {!user ?
       <MainEasy user={user} setUser={setUser}/> :
-      <ResultEasy user={user} />
+      <ResultEasy user={user} setUser={setUser}/>
       }
 
       

@@ -4,14 +4,19 @@ import { ReactComponent as Paper } from './images/icon-paper.svg';
 import { ReactComponent as Rock } from './images/icon-rock.svg';
 import { ReactComponent as Scissors } from './images/icon-scissors.svg';
 
-function ResultEasy({user}) {
+function ResultEasy({user, setUser}) {
 
   const [info, setInfo] = useState('');
   const [com, setCom] = useState(null);
   const [show, setShow] = useState(false);
   const [result, setResult] = useState(-1);
 
-  
+  const handleClick = () => {
+    setShow(false);
+    setResult(null);
+    setCom(null);
+    setUser(null);
+  }
 
   useEffect(() => {
     if (user === 'r') {
@@ -25,7 +30,7 @@ function ResultEasy({user}) {
 
     const timeoutId = setTimeout(() => {
       setShow(true);
-    }, 10000);
+    }, 1500);
 
     return () => {
       clearTimeout(timeoutId);
@@ -35,16 +40,16 @@ function ResultEasy({user}) {
 
   useEffect(() => {
     if (com === 1) { // house is rock 
-      if (user === 'p') setResult(2); // user won
-      else if (user === 's') setResult(1); // user lost
+      if (user === 'p') setResult(1); // user won
+      else if (user === 's') setResult(-1); // user lost
       else setResult(0); // even
     } else if (com === 2) { // house is paper
-      if (user === 's') setResult(2); // user won
-      else if (user === 'r') setResult(1); // user lost
+      if (user === 's') setResult(1); // user won
+      else if (user === 'r') setResult(-1); // user lost
       else setResult(0); // even
     } else if (com === 3) { // house is scissors
-      if (user === 'r') setResult(2); // user won
-      else if (user === 'p') setResult(1); // user lost
+      if (user === 'r') setResult(1); // user won
+      else if (user === 'p') setResult(-1); // user lost
       else setResult(0); // even
     } 
   }, [com])
@@ -75,8 +80,14 @@ function ResultEasy({user}) {
         }
       </div>
       {show && 
-      <div>
-        <span className='text'>{result}</span>
+      <div className='result-part'>
+        {result === 0 ? 
+          <span className='text result-text'>EVEN</span> :
+          result === -1 ?
+          <span className='text result-text'>YOU LOSE</span> :
+          <span className='text result-text'>YOU WIN</span>
+        }
+        <button onClick={handleClick}>PLAY AGAIN</button>
       </div>}
       <div className="computer-choose">
         <span className='text'>The House Picked</span>
