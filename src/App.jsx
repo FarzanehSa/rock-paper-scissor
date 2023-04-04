@@ -15,6 +15,7 @@ function App() {
 
   const [score, setScore] = useState(0);
   const [user, setUser] = useState(null);
+  console.log(score);
 
   return (
     <div className="App">
@@ -22,8 +23,9 @@ function App() {
       <Score score={score}/>
       {!user ?
       <MainEasy user={user} setUser={setUser}/> :
-      <ResultEasy user={user} setUser={setUser}/>
+      <ResultEasy user={user} setUser={setUser} setScore={setScore}/>
       }
+      
 
       
       {/* <Scissors /> */}

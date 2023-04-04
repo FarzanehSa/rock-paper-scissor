@@ -4,16 +4,16 @@ import { ReactComponent as Paper } from './images/icon-paper.svg';
 import { ReactComponent as Rock } from './images/icon-rock.svg';
 import { ReactComponent as Scissors } from './images/icon-scissors.svg';
 
-function ResultEasy({user, setUser}) {
+function ResultEasy({user, setUser, setScore}) {
 
   const [info, setInfo] = useState('');
   const [com, setCom] = useState(null);
   const [show, setShow] = useState(false);
-  const [result, setResult] = useState(-1);
+  const [result, setResult] = useState(0);
 
   const handleClick = () => {
     setShow(false);
-    setResult(null);
+    setResult(0);
     setCom(null);
     setUser(null);
   }
@@ -40,21 +40,25 @@ function ResultEasy({user, setUser}) {
 
   useEffect(() => {
     if (com === 1) { // house is rock 
-      if (user === 'p') setResult(1); // user won
-      else if (user === 's') setResult(-1); // user lost
-      else setResult(0); // even
+      if (user === 'p') setResult(pre => 1); // user won
+      else if (user === 's') setResult(pre => -1); // user lost
+      else setResult(pre => 0); // even
     } else if (com === 2) { // house is paper
-      if (user === 's') setResult(1); // user won
-      else if (user === 'r') setResult(-1); // user lost
-      else setResult(0); // even
+      if (user === 's') setResult(pre => 1); // user won
+      else if (user === 'r') setResult(pre => -1); // user lost
+      else setResult(pre => 0); // even
     } else if (com === 3) { // house is scissors
-      if (user === 'r') setResult(1); // user won
-      else if (user === 'p') setResult(-1); // user lost
-      else setResult(0); // even
-    } 
+      if (user === 'r') setResult(pre => 1); // user won
+      else if (user === 'p') setResult(pre => -1); // user lost
+      else setResult(pre => 0); // even
+    }
   }, [com])
 
-  
+  useEffect(() => {
+
+    console.log('r: ',result);
+    setScore(pre => pre + result);
+  }, [result])
   return (
     <div className="result-main">
       <div className='user-choose'>
