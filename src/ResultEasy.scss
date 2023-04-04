@@ -19,78 +19,47 @@
   }
 
   .text {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: white;
     margin-bottom: 2rem;
   }
 
-  .paper-container {
-    height: 120px;
-    width: 120px;
+  .container {
+    height: 160px;
+    width: 160px;
     border-radius: 50%;
-    background-color: CornflowerBlue;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 7px 0px 0px #324e80;
     display: flex;
     justify-content: center;
     align-items: center;
-
     z-index: 100;
+  }
+
+  .paper-container {
+    background-color: CornflowerBlue;
+    box-shadow: 0px 7px 0px 0px #324e80;
   }
   
   .scissors-container {
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
     background-color: #e1af34;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     box-shadow: 0px 7px 0px 0px #b98c1b;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    z-index: 100;
   }
 
   .rock-container {
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
     background-color: #ff2b06;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     box-shadow: 0px 7px 0px 0px #a31800;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    z-index: 100;
   }
 
   .com-container {
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
     background-color: #B8B8B8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     box-shadow: 0px 7px 0px 0px #808080;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    z-index: 100;
   }
 
   .key {
-    height: 100px;
-    width: 100px;
+    height: 130px;
+    width: 130px;
     border-radius: 50%;
     border: none;
     background-color: white;

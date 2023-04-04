@@ -15,11 +15,11 @@ function ResultEasy({user}) {
 
   useEffect(() => {
     if (user === 'r') {
-      setInfo('rock-container')
+      setInfo('container rock-container')
     } else if (user === 'p') {
-      setInfo('paper-container')
+      setInfo('container paper-container')
     } else if (user === 's') {
-      setInfo('scissors-container')
+      setInfo('container scissors-container')
     }
     setCom(Math.floor(Math.random() * 3) + 1);
 
@@ -81,24 +81,24 @@ function ResultEasy({user}) {
       <div className="computer-choose">
         <span className='text'>The House Picked</span>
         {com === 1 ?
-        <div className='rock-container'>
+        <div className='container rock-container'>
           <div className='key'>
             <Rock />
           </div>
         </div>
         : com === 2 ?
-          <div className='paper-container'>
+          <div className='container paper-container'>
             <div className='key'>
               <Paper />
             </div>
           </div>
           : com === 3 ?
-          <div className='scissors-container'>
+          <div className='container scissors-container'>
             <div className='key'>
               <Scissors />
             </div>
           </div> :
-          <div className='com-container'>
+          <div className='container com-container'>
         
           </div>
         }
