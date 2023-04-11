@@ -10,6 +10,7 @@ function ResultEasy({user, setUser, setScore}) {
   const [com, setCom] = useState(null);
   const [show, setShow] = useState(false);
   const [result, setResult] = useState(0);
+  const [userCyDiv, setUserCyDiv] = useState("div-u-3")
 
   const handleClick = () => {
     setShow(false);
@@ -52,36 +53,48 @@ function ResultEasy({user, setUser, setScore}) {
       else if (user === 'p') setResult(pre => -1); // user lost
       else setResult(pre => 0); // even
     }
-  }, [com])
+  }, [com]);
 
   useEffect(() => {
-
     console.log('r: ',result);
     setScore(pre => pre + result);
-  }, [result])
+
+    if (result === 1) {
+      setUserCyDiv("div-u-3 div-u-3-show")
+    }
+  }, [result]);
+
   return (
     <div className="result-main">
       <div className='user-choose'>
-        <span className='text'>You Picked</span>
-        {user === 'r' ?
-        <div className={info}>
-          <div className='key'>
-            <Rock />
+        <span className='text you-picked'>You Picked</span>
+        {show &&
+        <div className={userCyDiv}>
+          <div className='div-u-2'>
+            <div className='div-u-1'>
+            </div>
           </div>
         </div>
-        : user === 'p' ?
-          <div className={info}>
-            <div className='key'>
-              <Paper />
-            </div>
-          </div>
-          :
-          <div className={info}>
-            <div className='key'>
-              <Scissors />
-            </div>
-          </div>
         }
+      {user === 'r' ?
+      <div className={info}>
+        <div className='key'>
+          <Rock />
+        </div>
+      </div>
+      : user === 'p' ?
+        <div className={info}>
+          <div className='key'>
+            <Paper />
+          </div>
+        </div>
+        :
+        <div className={info}>
+          <div className='key'>
+            <Scissors />
+          </div>
+        </div>
+      }
       </div>
       {show && 
       <div className='result-part'>
@@ -91,7 +104,7 @@ function ResultEasy({user, setUser, setScore}) {
           <span className='text result-text'>YOU LOSE</span> :
           <span className='text result-text'>YOU WIN</span>
         }
-        <button onClick={handleClick}>PLAY AGAIN</button>
+        <button className='btn-play' onClick={handleClick}>PLAY AGAIN</button>
       </div>}
       <div className="computer-choose">
         <span className='text'>The House Picked</span>

@@ -8,25 +8,76 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  
 
   .user-choose, .computer-choose {
+    border: 2px solid red;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 4rem;
+    z-index: 2;
+    position: relative;
+  }
+
+  .div-u-3 {
+    border-radius: 50%;
+    height: 480px;
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(239, 47%, 25%);
+    z-index: 1;
+    position: absolute;
+    z-index: 1;
+    display: none;
+  }
+
+  .div-u-3-show {
+    display: flex;
+  }
+
+  .div-u-2 {
+    border-radius: 50%;
+    height: 360px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(239, 46%, 30%);
+  }
+  .div-u-1 {
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 240px;
+    width: 240px;
+    background-color:hsl(239, 46%, 35%);
   }
 
   .text {
     font-size: 1.1rem;
     color: white;
     margin-bottom: 2rem;
+    z-index: 2;
+  }
+
+  .you-picked {
+    position: absolute;
+    top: -40px;
+
   }
 
   .result-text {
     font-size: 2rem;
     font-weight: 600;
+    z-index: 2;
   }
 
   .result-part {
@@ -34,6 +85,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 2;
   }
 
   .container {
@@ -43,30 +95,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
+    // z-index: 100;
+    z-index: 2;
   }
 
   .paper-container {
     background-color: CornflowerBlue;
     box-shadow: 0px 7px 0px 0px #324e80;
+    z-index: 2;
   }
   
   .scissors-container {
     background-color: #e1af34;
     box-shadow: 0px 7px 0px 0px #b98c1b;
+    z-index: 2;
   }
 
   .rock-container {
     background-color: #ff2b06;
     box-shadow: 0px 7px 0px 0px #a31800;
+    z-index: 2;
   }
 
   .com-container {
     background-color: #B8B8B8;
     box-shadow: 0px 7px 0px 0px #808080;
+    z-index: 2;
   }
 
   .key {
@@ -78,6 +132,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
     box-shadow: inset 0px 7px 0px 0px silver;
+  }
+
+  .btn-play {
+    color: navy;
+    padding: 0.9rem 1.8rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+
+    &:hover {
+      color: red;
+    }
   }
 }
