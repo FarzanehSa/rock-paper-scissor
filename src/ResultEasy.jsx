@@ -10,7 +10,8 @@ function ResultEasy({user, setUser, setScore}) {
   const [com, setCom] = useState(null);
   const [show, setShow] = useState(false);
   const [result, setResult] = useState(0);
-  const [userCyDiv, setUserCyDiv] = useState("div-u-3")
+  const [userCyDiv, setUserCyDiv] = useState("div-u-3");
+  const [comCyDiv, setComCyDiv] = useState("div-u-3");
 
   const handleClick = () => {
     setShow(false);
@@ -62,6 +63,9 @@ function ResultEasy({user, setUser, setScore}) {
     if (result === 1) {
       setUserCyDiv("div-u-3 div-u-3-show")
     }
+    if (result === -1) {
+      setComCyDiv("div-u-3 div-u-3-show")
+    }
   }, [result]);
 
   return (
@@ -107,7 +111,15 @@ function ResultEasy({user, setUser, setScore}) {
         <button className='btn-play' onClick={handleClick}>PLAY AGAIN</button>
       </div>}
       <div className="computer-choose">
-        <span className='text'>The House Picked</span>
+        <span className='text com-picked'>The House Picked</span>
+        {show &&
+        <div className={comCyDiv}>
+          <div className='div-u-2'>
+            <div className='div-u-1'>
+            </div>
+          </div>
+        </div>
+        }
         {com === 1 ?
         <div className='container rock-container'>
           <div className='key'>

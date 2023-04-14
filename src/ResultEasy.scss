@@ -11,7 +11,7 @@
   
 
   .user-choose, .computer-choose {
-    border: 2px solid red;
+    // border: 2px solid red;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,9 +71,13 @@
   .you-picked {
     position: absolute;
     top: -40px;
-
   }
 
+  .com-picked {
+    position: absolute;
+    top: -40px;
+  }
+  
   .result-text {
     font-size: 2rem;
     font-weight: 600;
@@ -85,7 +89,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 2;
+    z-index: 3;
   }
 
   .container {
