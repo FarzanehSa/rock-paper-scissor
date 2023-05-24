@@ -58,14 +58,22 @@ function ResultEasy({user, setUser, setScore}) {
 
   useEffect(() => {
     console.log('r: ',result);
-    setScore(pre => pre + result);
 
+    const timeoutId = setTimeout(() => {
+      setScore(pre => pre + result);
+    }, 1500);
+
+    
     if (result === 1) {
       setUserCyDiv("div-u-3 div-u-3-show")
     }
     if (result === -1) {
       setComCyDiv("div-u-3 div-u-3-show")
     }
+    
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, [result]);
 
   return (
