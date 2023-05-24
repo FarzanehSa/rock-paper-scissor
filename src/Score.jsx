@@ -7,7 +7,7 @@ function Score({score}) {
     <div className="score-main">
       {/* <LogoBonus /> */}
       <div className='score-container'>
-        <Logo />
+        <Logo className="logo"/>
         <div className='point'>
           <span>Score</span>
           <span>{score}</span>

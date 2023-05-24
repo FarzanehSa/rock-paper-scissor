@@ -46,3 +46,33 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@media only screen and (max-width: 800px) {
+
+  .App {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .btn-rules {
+      position:relative;
+      bottom: auto;
+      right: auto;
+      padding: 10px 30px;
+      border-radius: 5px;
+      border: 2px solid white;
+      background-color: inherit;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+  
+      &:hover {
+        text-decoration: underline;
+        text-underline-offset: 8px;
+      }
+  
+    }
+  }
+}
