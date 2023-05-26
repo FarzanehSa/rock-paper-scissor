@@ -12,6 +12,7 @@ function ResultEasy({user, setUser, setScore}) {
   const [result, setResult] = useState(0);
   const [userCyDiv, setUserCyDiv] = useState("div-u-3");
   const [comCyDiv, setComCyDiv] = useState("div-u-3");
+  const [css, setCss] = useState('result-main')
 
   const handleClick = () => {
     setShow(false);
@@ -32,6 +33,7 @@ function ResultEasy({user, setUser, setScore}) {
 
     const timeoutId = setTimeout(() => {
       setShow(true);
+      setCss('result-main test');
     }, 1500);
 
     return () => {
@@ -70,14 +72,16 @@ function ResultEasy({user, setUser, setScore}) {
     if (result === -1) {
       setComCyDiv("div-u-3 div-u-3-show")
     }
-    
+
     return () => {
       clearTimeout(timeoutId);
     };
   }, [result]);
 
+  console.log(css);
+
   return (
-    <div className="result-main">
+    <div className={css}>
       <div className='user-choose'>
         <span className='text you-picked'>You Picked</span>
         {show &&
