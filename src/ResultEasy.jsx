@@ -39,8 +39,8 @@ function ResultEasy({user, setUser, setScore}) {
     return () => {
       clearTimeout(timeoutId);
     };
+  }, []); // eslint-disable-line
 
-  }, []);
 
   useEffect(() => {
     if (com === 1) { // house is rock 
@@ -56,11 +56,9 @@ function ResultEasy({user, setUser, setScore}) {
       else if (user === 'p') setResult(pre => -1); // user lost
       else setResult(pre => 0); // even
     }
-  }, [com]);
+  }, [com]); // eslint-disable-line
 
   useEffect(() => {
-    console.log('r: ',result);
-
     const timeoutId = setTimeout(() => {
       setScore(pre => pre + result);
     }, 1500);
@@ -76,9 +74,7 @@ function ResultEasy({user, setUser, setScore}) {
     return () => {
       clearTimeout(timeoutId);
     };
-  }, [result]);
-
-  console.log(css);
+  }, [result]); // eslint-disable-line
 
   return (
     <div className={css}>

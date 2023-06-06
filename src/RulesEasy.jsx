@@ -1,7 +1,4 @@
 import './RulesEasy.scss';
-import { ReactComponent as Paper } from './images/icon-paper.svg';
-import { ReactComponent as Rock } from './images/icon-rock.svg';
-import { ReactComponent as Scissors } from './images/icon-scissors.svg';
 import { ReactComponent as RulesImage } from './images/image-rules.svg';
 
 const RulesEasy = ({onClose}) => {
